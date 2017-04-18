@@ -52,25 +52,31 @@ X-Powered-By: Express
 }
 ```
 
-3. GET / (authorization required)
+3. GET /user (authorization required)
 ```
-http localhost:3090/ authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1OGY2MmIwMGJiNTM4MTI4YmYwNDIzMGQiLCJpYXQiOjE0OTI1Mjc4NzI2Mjl9.NWQkVRf2GEFbYV9bsZVPI
-0aStb8Cga0hPzLE7PJ6LlM
+http  localhost:3090/user authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1OGY2MmIwMGJiNTM4MTI4YmYwNDIzMGQiLCJpYXQiOjE0OTI1Mjc4NzI2Mjl9.NWQkVRf2GEFbYV9b
+sZVPI0aStb8Cga0hPzLE7PJ6LlM
 HTTP/1.1 200 OK
 Connection: keep-alive
-Content-Length: 14
+Content-Length: 153
 Content-Type: application/json; charset=utf-8
-Date: Tue, 18 Apr 2017 15:06:24 GMT
-ETag: W/"e-LXC2LfsckxSMrLTc9qtx7AGzQXE"
+Date: Tue, 18 Apr 2017 16:35:51 GMT
+ETag: W/"99-xauVciJnVfxP1XaLqfZ44fOShic"
 X-Powered-By: Express
 
 {
-    "hi": "there"
+	"user": {
+		"__v": 0,
+		"_id": "58f62b00bb538128bf04230d",
+		"email": "test9@example.com",
+		"password": "$2a$10$xCB5qaTPjOQBDnSxNTQJgeCbaDBqQPxGVPHwYXlu6H7UenXFkbPKO"
+	}
 }
 ```
+*Note: This route is just an example. Normally you will not publish these infomations in API.*
 
 ## Add Route Howto
-1. Add controller in `controller/`
-2. Add route in `route.js`
+1. Add a controller in `controller/`
+2. Add routes in `route.js`
 
 
